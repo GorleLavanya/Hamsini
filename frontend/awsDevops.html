@@ -15,7 +15,7 @@ body {
       backdrop-filter: blur(4px);
     }
 
-    /* Header Glass Style */
+        /* Header Glass Style */
     header {
       background: rgba(0, 11, 36, 0.5);
       color: white;
@@ -143,7 +143,6 @@ body {
       color: #000;
     }
 
-    
     .btn-icon {
       padding: 0.5rem;
       border-radius: 50%;
@@ -152,32 +151,31 @@ body {
 
     /* Glass Modal */
     .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0,0,0,0.4);
-    justify-content: center;
-    align-items: center;
-    
-  }
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      height: 100%;
+      width: 100%;
+      background-color: rgba(0,0,0,0.4);
+      justify-content: center;
+      align-items: center;
+    }
 
     .modal-content {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(15px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 2rem;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 500px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
-    color: #fff;
-    
-  }
-   .modal-header {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(15px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 2rem;
+      border-radius: 10px;
+      width: 90%;
+      max-width: 500px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      color: #fff;
+    }
+
+    .modal-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -212,35 +210,6 @@ body {
       border: 1px solid #ccc;
     }
 
-    .social-links {
-  display: flex;
-  gap: 1rem;
-}
-
-.social-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px; /* size of the circle */
-  height: 50px;
-  border-radius: 50%;
-  color: white;
-  font-size: 22px; /* icon size */
-  text-decoration: none;
-  transition: transform 0.2s ease;
-}
-
-.social-link:hover {
-  transform: scale(1.1);
-}
-
-/* Background colors for each platform */
-.social-link.facebook { background-color: #3b5998; }
-.social-link.twitter { background-color: #1da1f2; }
-.social-link.instagram { background-color: #e4405f; }
-.social-link.linkedin { background-color: #0077b5; }
-.social-link.whatsapp { background-color: #25d366; border: none; cursor: pointer; }
-
     /* Course Highlights - Glass */
     .course-points {
       max-width: 800px;
@@ -268,10 +237,36 @@ body {
 
     .course-points ul li::before {
       content: "✔";
-      position: absolute;
-      left: 0;
       color: #2ecc71;
-    }  
+    }
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px; /* size of the circle */
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  font-size: 22px; /* icon size */
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.social-link:hover {
+  transform: scale(1.1);
+}
+
+/* Background colors for each platform */
+.social-link.facebook { background-color: #3b5998; }
+.social-link.twitter { background-color: #1da1f2; }
+.social-link.instagram { background-color: #e4405f; }
+.social-link.linkedin { background-color: #0077b5; }
+.social-link.whatsapp { background-color: #25d366; border: none; cursor: pointer; }  
     </style>
     </head>
 <body>
