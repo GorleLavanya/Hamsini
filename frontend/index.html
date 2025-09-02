@@ -1140,7 +1140,7 @@
        <!-- Logo -->
 <div class="logo">
     <a href="index.html">
-        <img src="logo.png" alt="Hamsini Tech Solutions Logo" >
+        <img src="logo-website.png" alt="Hamsini Tech Solutions Logo" >
     </a>
 </div>
 <nav class="nav" id="mainNav">
@@ -1263,7 +1263,7 @@
                      
                     <div class="course-badge">Popular</div>
                     <div class="course-image-container">
-                        <img src="cyber.jpeg" alt="AWS & DevOps" class="course-image">
+                        <img src="cyber.jpeg" alt="Cyber Security" class="course-image">
                     </div>
                     <div class="course-content">
                         <h3 class="course-title">Cyber Security</h3>
@@ -1288,7 +1288,7 @@
                             <button class="btn btn-outline btn-sm" onclick="openShareModal()">
                                 <i class="fas fa-share-alt"></i>
                             </button>
-                            <button class="btn btn-primary btn-sm" onclick="openEnrollModal('AWS & DevOps')">
+                            <button class="btn btn-primary btn-sm" onclick="openEnrollModal('Cyber Security')">
                                 Enroll Now
                             </button>
                         </div>
@@ -1555,7 +1555,7 @@
                 <div class="course-card" onclick="openCoursePage(event, 'mernStack.html')">
                 
                     <div class="course-image-container">
-                        <img src="mernStack.png" alt="Azure DevOps" class="course-image">
+                        <img src="mernStack.png" alt="Mern Stack" class="course-image">
                     </div>
                     <div class="course-content">
                         <h3 class="course-title">Mern Stack</h3>
@@ -1580,7 +1580,7 @@
                             <button class="btn btn-outline btn-sm" onclick="openShareModal()">
                                 <i class="fas fa-share-alt"></i>
                             </button>
-                            <button class="btn btn-primary btn-sm" onclick="openEnrollModal('Azure DevOps')">
+                            <button class="btn btn-primary btn-sm" onclick="openEnrollModal('Mern Stack')">
                                 Enroll Now
                             </button>
                         </div>
@@ -1713,7 +1713,7 @@
             <div class="footer-col">
                 <div class="footer-logo">
                     <a href="index.html">
-                    <img src="logos.jpg" alt="Hamsini Tech Solutions Logo" style="height: 100px; margin-right: 15px; width: auto;">
+                    <img src="whats.png" alt="Hamsini Tech Solutions Logo" style="height: 100px; margin-right: 15px; width: auto;">
                     </a>
                 </div>
                 <p class="footer-about">
@@ -1904,10 +1904,11 @@
         }
 
     function submitEnrollForm() {
+    const course = document.getElementById('courseName').value;  
     const name = document.getElementById('enrollName').value.trim();
     const mobile = document.getElementById('enrollMobile').value.trim();
     const email = document.getElementById('enrollEmail').value.trim();
-    const course = document.getElementById('courseName').value;
+    const batch = document.getElementById('enrollBatch').value;
 
     if (!name || !mobile || !email) {
         alert('Please fill in all required fields.');
@@ -1916,10 +1917,11 @@
 
     // ✅ NEW: Send data to Spring Boot backend
     const data = {
+        course: course,
         fullName: name,
         mobile: mobile,
         email: email,
-        course: course
+        batch : batch
     };
 
     fetch("https://www.hamsinitechsolutions.com/api/enroll", {

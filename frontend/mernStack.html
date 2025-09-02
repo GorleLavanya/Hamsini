@@ -289,7 +289,7 @@
                 <div class="course-card">
                     <div class="course-badge" style="font-size:xx-small;">Popular</div>
                     <div class="course-image-container">
-                        <img src="mernStack.png" alt="AWS & DevOps" class="course-image">
+                        <img src="mernStack.png" alt="Mern Stack" class="course-image">
                     </div>
                     <div class="course-content">
                         <h3 class="course-title">Mern Stack </h3>
@@ -314,7 +314,7 @@
                             <button class="btn btn-outline btn-sm" onclick="openShareModal()">
                                 <i class="fas fa-share-alt"></i>
                             </button>
-                            <button class="btn btn-primary btn-sm" onclick="openEnrollModal('AWS & DevOps')">
+                            <button class="btn btn-primary btn-sm" onclick="openEnrollModal('Mern Stack')">
                                 Enroll Now
                             </button>
                         </div>
@@ -449,10 +449,10 @@
         }
 
     function submitEnrollForm() {
+    const course = document.getElementById('courseName').value;  
     const name = document.getElementById('enrollName').value.trim();
     const mobile = document.getElementById('enrollMobile').value.trim();
     const email = document.getElementById('enrollEmail').value.trim();
-    const course = document.getElementById('courseName').value;
     const batch = document.getElementById('enrollBatch').value;
 
     if (!name || !mobile || !email) {
@@ -462,10 +462,10 @@
 
     // ✅ Send data to Spring Boot backend (same server)
     const data = {
+        course: course,
         fullName: name,
         mobile: mobile,
         email: email,
-        course: course,
         batch : batch
         
     };

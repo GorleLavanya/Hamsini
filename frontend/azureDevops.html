@@ -1,5 +1,7 @@
 <html>
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>AWS & DEVOPS</title>
         <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
@@ -444,10 +446,10 @@
         }
 
     function submitEnrollForm() {
+    const course = document.getElementById('courseName').value;  
     const name = document.getElementById('enrollName').value.trim();
     const mobile = document.getElementById('enrollMobile').value.trim();
     const email = document.getElementById('enrollEmail').value.trim();
-    const course = document.getElementById('courseName').value;
     const batch = document.getElementById('enrollBatch').value;
 
     if (!name || !mobile || !email) {
@@ -457,10 +459,11 @@
 
     // ✅ Send data to Spring Boot backend (same server)
     const data = {
+
+        course: course,
         fullName: name,
         mobile: mobile,
         email: email,
-        course: course,
         batch : batch
         
     };

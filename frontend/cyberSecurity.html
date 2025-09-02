@@ -2,7 +2,7 @@
     <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>AWS & DEVOPS</title>
+        <title>Cyber Security</title>
         <!-- Favicon -->
     <link rel="icon" type="image/png" href="favicon.png">
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -282,12 +282,12 @@
       <a href="hire.html">Hire From Us</a>
     </div>
   </header>
-         <!-- Java Full Stack -->
-                <div class="course-card" onclick="openCoursePage(event, 'java.html')">
+         <!-- cyber security -->
+                <div class="course-card">
                     
                     <div class="course-badge">Popular</div>
                     <div class="course-image-container">
-                        <img src="cyber.jpeg" alt="Java Full Stack" class="course-image">
+                        <img src="cyber.jpeg" alt="Cyber Security" class="course-image">
                     </div>
                     <div class="course-content">
                         <h3 class="course-title">Cyber Security</h3>
@@ -312,7 +312,7 @@
                             <button class="btn btn-outline btn-sm" onclick="openShareModal()">
                                 <i class="fas fa-share-alt"></i>
                             </button>
-                            <button class="btn btn-primary btn-sm" onclick="openEnrollModal('Java Full Stack')">
+                            <button class="btn btn-primary btn-sm" onclick="openEnrollModal('Cyber Security')">
                                 Enroll Now
                             </button>
                         </div>
@@ -447,10 +447,10 @@
         }
 
     function submitEnrollForm() {
+    const course = document.getElementById('courseName').value;  
     const name = document.getElementById('enrollName').value.trim();
     const mobile = document.getElementById('enrollMobile').value.trim();
     const email = document.getElementById('enrollEmail').value.trim();
-    const course = document.getElementById('courseName').value;
     const batch = document.getElementById('enrollBatch').value;
 
     if (!name || !mobile || !email) {
@@ -460,10 +460,10 @@
 
     // ✅ Send data to Spring Boot backend (same server)
     const data = {
+        course: course,
         fullName: name,
         mobile: mobile,
         email: email,
-        course: course,
         batch : batch
         
     };

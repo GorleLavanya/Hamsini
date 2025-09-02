@@ -1,5 +1,7 @@
 package com.hamsini.backend.model;
 
+
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -19,10 +21,15 @@ public class EnrollRequest {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    
     private String course;
+    @Column(name = "full_name")
     private String fullName;
+
     private String mobile;
+    
     private String email;
+    
     private String batch;
 
     
